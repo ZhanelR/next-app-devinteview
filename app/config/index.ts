@@ -1,0 +1,1 @@
+export {PANTONE as COLORS} from "./stylesConfig"

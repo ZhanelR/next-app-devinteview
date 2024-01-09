@@ -1,8 +1,9 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-
+import StyledComponentsRegistry from './registry' 
 const inter = Inter({ subsets: ['latin'] })
+import GlobalStyles from './styles/GlobalStyles';
 
 //Определение метаданных
 //metadata - объект, содержащий информацию о веб-странице, такую как заголовок и описание.
@@ -23,7 +24,12 @@ export default function RootLayout({
   //который применяется к тегу body.
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <StyledComponentsRegistry>
+          <GlobalStyles />
+          {children}
+        </StyledComponentsRegistry>
+      </body>
     </html>
   )
 }
