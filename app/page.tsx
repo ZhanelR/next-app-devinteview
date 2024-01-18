@@ -9,9 +9,8 @@ import Categories from './components/Categories';
 import { ICategory, mockCategories } from './entities/category/category';
 import { onSnapshot, collection, query } from 'firebase/firestore';
 import { db } from './firebaseConfig';
-import { Provider, useDispatch, useSelector } from 'react-redux';
 import { fetchCategories, selectCategories } from './entities/category/categorySlice';
-import store from "./config/store"
+import { useDispatch } from './lib/redux';
 
 
 const MainContainer = styled.main`
@@ -56,7 +55,7 @@ export default function Home() {
         }, []) */
 
   return (
-    <Provider store={store}>
+    <>
       <Head children={undefined}>
 {/*       Сюда можно встав тэги аналитики, фб и др*/}    
       </Head>
@@ -66,6 +65,6 @@ export default function Home() {
         <Banner />
         <Categories categoriesList={mockCategories} />
     </MainContainer>
-   </Provider>
+   </>
   );
 }

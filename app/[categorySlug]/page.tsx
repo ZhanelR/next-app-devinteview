@@ -1,8 +1,6 @@
 "use client"
-
 import React from 'react'
 import Collections from '../components/Collections'
-import { mockCollections } from '../entities/collection/collection'
 import { useParams } from 'next/navigation'
 import { mockCategories } from '../entities/category/category'
 

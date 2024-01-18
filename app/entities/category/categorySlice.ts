@@ -1,4 +1,4 @@
-import { configureStore, createSelector, createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { ICollection } from '../collection/collection';
 
 
